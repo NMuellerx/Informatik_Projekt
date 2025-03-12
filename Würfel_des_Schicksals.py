@@ -12,6 +12,10 @@ def spiel_start():
         except ValueError:
             print("Bitte eine gültige Zahl eingeben!")
 
+    #Spielregeln definieren
+    print("\nSpielregeln:\nJeder Spieler hat 3 Leben. Die Spieler würfeln abwechselnd,\nwobei die Augenzahl zusammenaddiert wird. Kommt ein Spieler durch würfeln über die Zahl 15,\nverliert er ein Leben und es beginnt eine neue Runde.")
+    print("\nZusatzregeln: Eine gewürfelte 3 wird als O gewertet.\n")
+
     # Spieler initialisieren
     spieler = {f"Spieler {i+1}": 3 for i in range(anzahl_spieler)}
 
@@ -27,9 +31,13 @@ def spiel_start():
 
                 input(f"{name} ist dran. Drücke Enter zum Würfeln... ")
                 wurf = wuerfeln()
-                aktuelle_summe += wurf
-
-                print(f"{name} hat eine {wurf} gewürfelt. Gesamt: {aktuelle_summe}")
+                if wurf == 3:
+                    wurf = 0
+                    aktuelle_summe += wurf
+                    print(f"{name} hat eine 3 gewürfelt. Gesamt: {aktuelle_summe}")
+                else:
+                    aktuelle_summe += wurf
+                    print(f"{name} hat eine {wurf} gewürfelt. Gesamt: {aktuelle_summe}")
 
                 if aktuelle_summe > 15:
                     spieler[name] -=1
