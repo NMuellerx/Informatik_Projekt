@@ -49,7 +49,7 @@ def spiel_start():
                 
                 if aktuelle_summe > 15:
                     if spieler[name] == 1:
-                        print(f"Knadenbrot. {name} hat eine letzte Chance im Spiel zu bleiben")
+                        print(f"Gnadenbrot. {name} hat eine letzte Chance im Spiel zu bleiben")
                         input(f"Drücke Enter zum Würfeln... ")
                         wurf = wuerfeln()
                         if wurf == 6:
