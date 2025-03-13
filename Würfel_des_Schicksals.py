@@ -31,6 +31,14 @@ def spiel_start():
                 
                 input(f"{name} ist dran. Drücke Enter zum Würfeln... ")
                 wurf = wuerfeln()
+                while wurf == 6:
+                    print(f"{name} hat eine 6 gewürfelt er darf noch einmal")
+                    input(f"{name} ist dran. Drücke Enter zum Würfeln... ")
+                    wurf = wuerfeln()
+                    if wurf == 6:
+                        continue
+                    else:
+                        break
                 if wurf == 3:
                     wurf = 0
                     aktuelle_summe += wurf
@@ -40,10 +48,18 @@ def spiel_start():
                     print(f"{name} hat eine {wurf} gewürfelt. Gesamt: {aktuelle_summe}")
                 
                 if aktuelle_summe > 15:
-                    spieler[name] -= 1
-                    print(f"{name} hat die 15 überschritten und verliert ein Leben! Verbleibende Leben: {spieler[name]}")
-                    if spieler[name] == 0:
-                        print(f"\n{name} ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
+                    if spieler[name] == 1:
+                        print(f"Knadenbrot. {name} hat eine letzte Chance im Spiel zu bleiben")
+                        input(f"Drücke Enter zum Würfeln... ")
+                        wurf = wuerfeln()
+                        if wurf == 6:
+                            print(f"{name} hat eine 6 gewürfelt. Er bleibt mit einem Leben im Spiel")
+                        else:
+                            spieler[name] -= 1
+                            print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
+                    else:
+                        spieler[name] -= 1
+                        print(f"{name} hat die 15 überschritten und verliert ein Leben! Verbleibende Leben: {spieler[name]}")
                     break # Runde neu starten
                 
             if aktuelle_summe > 15:
