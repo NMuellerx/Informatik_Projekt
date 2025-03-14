@@ -31,7 +31,7 @@ def spiel_start():
                 
                 input(f"{name} ist dran. Drücke Enter zum Würfeln... ")
                 wurf = wuerfeln()
-                while wurf == 6:
+                while wurf == 6: # Wenn 6 gewürfelt wird, darf der Spieler nocheinmal würfeln
                     print(f"{name} hat eine 6 gewürfelt er darf noch einmal")
                     input(f"{name} ist dran. Drücke Enter zum Würfeln... ")
                     wurf = wuerfeln()
@@ -39,32 +39,47 @@ def spiel_start():
                         continue
                     else:
                         break
-                if wurf == 3:
+                if wurf == 3: # Wenn 3 gewürfelt wird, zählt diese mit der Wertigkeit 0
                     wurf = 0
-                    aktuelle_summe += wurf
+                    aktuelle_summe += wurf # Aufaddieren der Würfe
                     print(f"{name} hat eine 3 gewürfelt. Gesamt: {aktuelle_summe}")
                 else:
-                    aktuelle_summe += wurf
+                    aktuelle_summe += wurf # Aufaddieren der Würfe
                     print(f"{name} hat eine {wurf} gewürfelt. Gesamt: {aktuelle_summe}")
-                
-                if aktuelle_summe > 15:
-                    if spieler[name] == 1:
+                if aktuelle_summe > 15:    
+                    if spieler[name] == 1: # Bei letztem Leben gibt es eine last Chance
                         print(f"Gnadenbrot. {name} hat eine letzte Chance im Spiel zu bleiben")
                         input(f"Drücke Enter zum Würfeln... ")
                         wurf = wuerfeln()
-                        if wurf == 6:
+                        if wurf == 6: # Wenn 6 gewürfelt wird, bleibt Spieler im Spiel
                             print(f"{name} hat eine 6 gewürfelt. Er bleibt mit einem Leben im Spiel")
                         else:
-                            spieler[name] -= 1
-                            print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
+                            spieler[name] -= 1 # Wenn 1-5 gewürfelt wird, scheidet Spieler aus
+                            if sum(leben > 0 for leben in spieler.values()) < 2:
+                                print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden.")
+                            else:
+                                print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
                     else:
-                        spieler[name] -= 1
-                        print(f"{name} hat die 15 überschritten und verliert ein Leben! Verbleibende Leben: {spieler[name]}")
+                        while True:
+                            print(f"\n{name}, willst du...\n" ###
+                                "1 - Ein Leben verlieren?\n"  ### Abfrage ob man Leben verlieren will oder stattdessen ein Strafe in Kauf nimmt.
+                                "2 - bestraft werden?\n"      ### Geht nur wenn der Spieler noch mehr als 1 Leben hat
+                                "Deine Wahl (1 oder 2): ")    ###
+                            entscheidung = input()
+                            if entscheidung == "2":
+                                print(f"{name} muss ein CenterShock essen. Das Spiel geht weiter")
+                                break
+                            elif entscheidung == "1":
+                                spieler[name] -= 1
+                                print(f"{name} verliert ein Leben. Verbleibende Leben: {spieler[name]}")
+                                break
+                            else:
+                                print("Bitte 1 oder 2 eingeben.") # Aufforderung zur korrekten Eingabe nach falscher Eingabe
                     break # Runde neu starten
                 
             if aktuelle_summe > 15:
                 break # Runde neu starten
-            
+
     # Gewinner bestimmen
     gewinner = [name for name, leben in spieler.items() if leben > 0][0]
     print(f"\nSpiel beendet! {gewinner} hat gewonnen!") 
