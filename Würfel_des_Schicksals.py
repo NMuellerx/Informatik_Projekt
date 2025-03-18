@@ -1,6 +1,9 @@
 import random 
 def wuerfeln():
     return random.randint(1, 6)
+def zufallsbestrafung():
+    strafen = ["ein Centershock essen", "einen albernen Tanz aufführen", "für den Rest des Spiels Sätze mit einem Grunzen beenden", "einen Zitronenschnitz essen"]
+    return random.choice(strafen)
 def spiel_start(): 
     # Anzahl der Spieler abfragen
     while True:
@@ -67,7 +70,8 @@ def spiel_start():
                                 "Deine Wahl (1 oder 2): ")    ###
                             entscheidung = input()
                             if entscheidung == "2":
-                                print(f"{name} muss ein CenterShock essen. Das Spiel geht weiter")
+                                print(f"{name} muss ", end="")
+                                print(zufallsbestrafung())
                                 break
                             elif entscheidung == "1":
                                 spieler[name] -= 1
