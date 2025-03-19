@@ -17,11 +17,11 @@ def zufallsbestrafung():
     strafen = ["ein Centershock essen", "einen albernen Tanz aufführen", "für den Rest des Spiels Sätze mit einem Grunzen beenden", "einen Zitronenschnitz essen"]
     return random.choice(strafen)
 def spiel_start(): 
-    print(color.CYAN +"╔══════════════════════════╗")
-    print("║" + color.BOLD + "  WÜRFEL DES SCHICKSALS   " + color.END + color.CYAN + "║")
-    print("║"+ color.END +"      by [Patrick Boßlet] " + color.CYAN +"║")
-    print("║"+ color.END +"      and [Niclas Müller] " + color.CYAN +"║")
-    print("╚══════════════════════════╝\n" + color.END)
+    print(color.CYAN +"╔══════════════════════════════╗")
+    print("║" + color.BOLD + "  DIE WÜRFEL DES SCHICKSALS   " + color.END + color.CYAN + "║")
+    print("║"+ color.END +"        by [Patrick Boßlet]   " + color.CYAN +"║")
+    print("║"+ color.END +"        and [Niclas Müller]   " + color.CYAN +"║")
+    print("╚══════════════════════════════╝\n" + color.END)
     # Anzahl der Spieler abfragen
     while True:
         try: 
