@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="EDB2B359EDF16C1C">
+  <PROJECT FORMAT="1.00" NAME="Die Würfel des Schicksals" AUTHOR="nicla" CREATED="2025.03.10 17:28:34" MODIFIED="2025.03.19 14:17:55">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Hauptprogramm 1" CREATED="2025.03.10 17:28:56" MODIFIED="2025.03.19 14:17:55">
+        <LAYOUT FORMAT="1.00" COLUMNS="7" ROWS="22">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Hauptprogramm 1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Abfrage der Spieleranzahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="6">
+                <TEXT><![CDATA[Eingabe der Spieleranzahl]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="8">
+                <TEXT><![CDATA[Spiel beginnt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="10" ASSOCIATE="12">
+                <TEXT><![CDATA[Solange mehr als 1 Spieler übrig ist]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="114">
+                <TEXT><![CDATA[eine neue Runde beginnt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="7">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="116">
+                <TEXT><![CDATA[Spieler X ist an der Reihe]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="8">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="118">
+                <TEXT><![CDATA[Enter drücken umzu würfeln]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="14">
+                <TEXT><![CDATA[Spieler würfelt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Zahlen 1,2,4 oder 5?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="20">
+                <TEXT><![CDATA[Wurf wird zur Würfelsumme aufaddiert]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="38">
+                <TEXT><![CDATA[Würfelsumme > 15?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="41">
+                <TEXT><![CDATA[nächster Spieler]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="19">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="12" ASSOCIATE="10">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="20">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="125">
+                <TEXT><![CDATA[Spieler X hat gewonnen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="21">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="94">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="18">
+                <TEXT><![CDATA[Zahl 6?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="91">
+                <TEXT><![CDATA[3 hat Wertung 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="79">
+                <TEXT><![CDATA[Spieler scheidet aus]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="16">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="108">
+                <TEXT><![CDATA[Spieler scheidet aus]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="17">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="85">
+                <TEXT><![CDATA[nächste Runde]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="18">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="133">
+                <TEXT><![CDATA[Würfelsumme = 0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="19">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="144">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="98">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="10">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="127">
+                <TEXT><![CDATA[Zahl 3?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="129">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="40">
+                <TEXT><![CDATA[Spieler hat mehr als 1 Leben?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="13">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="120">
+                <TEXT><![CDATA[Gnadenbrot - eine 6 kann den Spieler retten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="14">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="122">
+                <TEXT><![CDATA[Enter drücken umzu würfeln]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="15">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="56">
+                <TEXT><![CDATA[Spieler würfelt eine 6?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="16">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="106">
+                <TEXT><![CDATA[Spieler bleibt im Spiel]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="17">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="124">
+                <TEXT><![CDATA[Spieler X hat noch X Leben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="110">
+                <TEXT><![CDATA[Leben verlieren oder Strafe]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="12">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="112">
+                <TEXT><![CDATA[Leben verlieren oder Strafe]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="12">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="58">
+                <TEXT><![CDATA[Leben verlieren?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="15">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="62">
+                <TEXT><![CDATA[Spieler verliert 1 Leben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="16">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="104">
+                <TEXT><![CDATA[Spieler verliert 1 Leben]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="17">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="12">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="72">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="15">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="102">
+                <TEXT><![CDATA[Spieler bekommt eine Bestrafung]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="17">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="76">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="6" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="7" FROM="6" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="13" FROM="12" TO="125" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="114" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="15" FROM="14" TO="16" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="17" FROM="16" TO="20" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="21" FROM="20" TO="38" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="22" FROM="16" TO="18" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="131" FROM="127" TO="129" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="99" FROM="127" TO="98" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="95" FROM="18" TO="94" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="100" FROM="98" TO="94" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="97" FROM="18" TO="127" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="38" TO="41" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="70" FROM="62" TO="104" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="67" FROM="56" TO="106" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="145" FROM="133" TO="144" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="38" TO="40" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="55" FROM="40" TO="120" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="86" FROM="79" TO="108" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="59" FROM="40" TO="110" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="61" FROM="58" TO="62" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="87" FROM="124" TO="85" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="73" FROM="58" TO="72" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="78" FROM="76" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="75" FROM="72" TO="102" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="80" FROM="56" TO="79" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="69" TO="124" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="89" FROM="85" TO="133" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="84" FROM="41" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="130" FROM="129" TO="91" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="101" FROM="94" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="103" FROM="102" TO="76" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="105" FROM="104" TO="69" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="107" FROM="106" TO="124" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="109" FROM="108" TO="85" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="111" FROM="110" TO="112" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="113" FROM="112" TO="58" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="146" FROM="144" TO="12" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="117" FROM="116" TO="118" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="119" FROM="118" TO="14" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="121" FROM="120" TO="122" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="123" FROM="122" TO="56" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="126" FROM="125" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="132" FROM="91" TO="20" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="143" FROM="114" TO="116" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
