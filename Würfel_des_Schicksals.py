@@ -76,9 +76,9 @@ def spiel_start():
                         else:
                             spieler[name] -= 1 # Wenn 1-5 gewürfelt wird, scheidet Spieler aus
                             if sum(leben > 0 for leben in spieler.values()) < 2:
-                                print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden.")
+                                print(f"\n{name} hat eine {wurf} gewürfelt er ist ausgeschieden.")
                             else:
-                                print(f"\n{name} hat {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
+                                print(f"\n{name} hat eine {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
                     else:
                         while True:
                             print(f"\n{name}, willst du...\n" ###
