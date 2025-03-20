@@ -1,4 +1,6 @@
 import random 
+
+# Farben für die Ausgabe
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -11,11 +13,17 @@ class color:
    UNDERLINE = '\033[4m'
    ITALICS = '\033[3m'
    END = '\033[0m'
+
+# Würfelfunktion
 def wuerfeln():
     return random.randint(1, 6)
+
+# definieren der Zufallsbestrafungen
 def zufallsbestrafung():
     strafen = ["ein Centershock essen", "einen albernen Tanz aufführen", "für den Rest des Spiels Sätze mit einem Grunzen beenden", "einen Zitronenschnitz essen"]
     return random.choice(strafen)
+
+# Spielstart
 def spiel_start(): 
     print(color.CYAN +"╔══════════════════════════════╗")
     print("║" + color.BOLD + "  DIE WÜRFEL DES SCHICKSALS   " + color.END + color.CYAN + "║")
@@ -59,6 +67,7 @@ def spiel_start():
                         continue
                     else:
                         break
+
                 if wurf == 3: # Wenn 3 gewürfelt wird, zählt diese mit der Wertigkeit 0
                     wurf = 0
                     aktuelle_summe += wurf # Aufaddieren der Würfe
@@ -66,6 +75,7 @@ def spiel_start():
                 else:
                     aktuelle_summe += wurf # Aufaddieren der Würfe
                     print(f"{name} hat eine {wurf} gewürfelt. Gesamt: {aktuelle_summe}")
+
                 if aktuelle_summe > 15:    
                     if spieler[name] == 1: # Bei letztem Leben gibt es eine last Chance
                         print(f"Gnadenbrot. {name} hat eine letzte Chance im Spiel zu bleiben")
@@ -79,6 +89,7 @@ def spiel_start():
                                 print(f"\n{name} hat eine {wurf} gewürfelt er ist ausgeschieden.")
                             else:
                                 print(f"\n{name} hat eine {wurf} gewürfelt er ist ausgeschieden. Das Spiel wird ohne ihn fortgesetzt")
+
                     else:
                         while True:
                             print(f"\n{name}, willst du...\n" ###
